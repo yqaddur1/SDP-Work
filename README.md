@@ -4,14 +4,14 @@ This repository contains code for estimating the **Euclidean distortion** of met
 
 ## Overview
 
-Euclidean distortion quantifies how well a metric space can be approximated by Euclidean distance. This concept is especially relevant in theoretical computer science and machine learning, where algorithms often rely on geometric structure.
+Euclidean distortion quantifies how well a metric space can be approximated by Euclidean distance. This concept is especially relevant in transferring Euclidean machine learning algorithms to the metric space settings, especially ones arising in the context of **invariant machine learning**.
 
 Mathematically, the Euclidean distortion of a metric space can be expressed as the supremum of optimal values from an infinite sequence of semidefinite programs.
 
 ## Contributions
 
-- Implementation of SDP formulations in files prefixed with `cvx_for_...`
-- Supporting scripts and experiments in the `python/` directory
+- Implementation of SDP formulations in files prefixed with `cvx_for_...` for a few quotients by wallpaper groups.
+- Experiments for training the sampling process in the `python/` directory
 - Precomputed outputs and logs in the `saved data/` folder
 
 ## Status
