@@ -1,63 +1,28 @@
-CVX: A system for disciplined convex programming
-Copyright 2005-2014 CVX Research, Inc.
-Professional package
---------------------------------------------------------
+# Estimating Euclidean Distortion using Semidefinite Programming
 
-Thank you for your interest in CVX!
+This repository contains code for estimating the **Euclidean distortion** of metric quotients by **wallpaper groups**, using **semidefinite programming (SDP)**. This empirical investigation builds on the work of [1,2].
 
-INSTALLATION
-------------
+## Overview
 
-For full installation instructions, please see the Installation section of the
-users' guide, which can be found in
-	doc/install.html
-	doc/CVX.pdf (section 2)
-or online at
-	http://cvxr.com/cvx/doc/install.html
+Euclidean distortion quantifies how well a metric space can be approximated by Euclidean distance. This concept is especially relevant in theoretical computer science and machine learning, where algorithms often rely on geometric structure.
 
-DOCUMENTATION
--------------
+Mathematically, the Euclidean distortion of a metric space can be expressed as the supremum of optimal values from an infinite sequence of semidefinite programs.
 
-Full documentation, in both HTML and PDF formats, is available in
-	doc/index.html
-	doc/CVX.pdf
-or online at
-	http://cvxr.com/cvx/doc
+## Contributions
 
-EXAMPLES
---------
+- Implementation of SDP formulations in files prefixed with `cvx_for_...`
+- Supporting scripts and experiments in the `python/` directory
+- Precomputed outputs and logs in the `saved data/` folder
 
-The full example library is available in the examples/ subdirectory. The index
-can be found at
-	examples/index.html
-or online at
-	http://cvxr.com/cvx/examples
+## Status
 
-SUPPORT
--------
+🚧 This is still a **work in progress**.
 
-Please note that CVX Research, Inc. cannot provide direct email support
-without a paid contract. However, we have created an assembled a variety of
-avenues for obtaining help with CVX in particular or optimization in general.
-Please see the Support section of the documentation for details:
-	doc/support.html
-	http://cvxr.com/cvx/doc/support.html
+## References
 
-LICENSE
--------
+1. J. Cahill, J. Iverson, D. G. Mixon, "Towards a bilipschitz invariant theory", ACHA 2024.
+2. B. Blum-Smith, H. Derksen, D. G. Mixon, **Y. Qaddura**, B. Voss, "Estimating the Euclidean distortion of orbit spaces", arxiv:2506.04425.
 
-This package is governed by the terms of the CVX Professional License. This
-package may *not* be redistributed or placed in a public repository without
-the advance written consent of CVX Research, Inc. Please see the file
-LICENSE.txt for more precise license terms.
+---
 
-The contents of the example library in the `examples/` subdirectory
-are *public domain*. We do ask that if you use any of this content in
-your own work, that you acknowledge the source and any specific authors
-cited therein.
-
-Redistributable packages governed by the GPLv3-based CVX Standard License 
-are available directly from the CVX download page
-	http://cvxr.com/cvx/download
-or from the CVX GitHub repository
-	http://github.com/cvxr/cvx
+Feel free to explore, use, or adapt the code. Suggestions and collaborations are welcome!
