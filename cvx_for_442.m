@@ -1,14 +1,29 @@
-n=25;
+n=36;
 
-if ~exist('X', 'var')
-    X=[];
-    k=round(sqrt(n));
-    for ii=1:k
-        for jj=1:k
-            X(:,end+1)=[(ii-1)/(k); (jj-1)/(k-1)];
-        end
+X=[];
+k=round(sqrt(n));
+for ii=1:k
+    for jj=1:k
+        X(:,end+1)=[(ii-1)/(k); (jj-1)/(k-1)]/10;
     end
 end
+
+for ii=1:k
+    for jj=1:k
+        X(:,end+1)=[0.9;0]+[(ii-1)/(k); (jj-1)/(k-1)]/10;
+    end
+end
+
+figure;
+scatter(X(1,:), X(2,:), 'filled');
+axis equal;
+xlim([-0.1 1.1]);
+ylim([-0.1 1.1]);
+grid on;
+title('Plot of X points');
+xlabel('x');
+ylabel('y');
+
 
 A_all = cat(3, ...
     eye(2), ...  % Identity
@@ -57,7 +72,7 @@ cvx_begin sdp
     minimize( t )
     subject to
         for ii=1:n
-            for jj=1:n
+            for jj=(ii+1):n
                 Q(ii,ii)-2*Q(ii,jj)+Q(jj,jj) >= D(ii,jj)
                 Q(ii,ii)-2*Q(ii,jj)+Q(jj,jj) <= t*D(ii,jj)
             end
