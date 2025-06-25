@@ -22,7 +22,7 @@ Mathematically, the Euclidean distortion of a metric space can be expressed as t
 
 [1] J. Cahill, J. W. Iverson, D. G. Mixon, *Towards a bilipschitz invariant theory*, Appl. Comput. Harmon. Anal. (2024).
 
-[2] B. Blum-Smith, H. Derksen, D. G. Mixon, **Y. Qaddura**, B. Voss, *Estimating the Euclidean distortion of orbit spaces*, arXiv:2506.04425.
+[2] B. Blum-Smith, H. Derksen, D. G. Mixon, **Y. Qaddura**, B. Vose, *Estimating the Euclidean distortion of orbit spaces*, arXiv:2506.04425.
 
 ---
 
